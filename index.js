@@ -406,6 +406,7 @@ function SelectProject(openStoryID) {
 		if(Mantis.ClosedIssuesFilterID !== null) {
 			window.setTimeout("LoadFilterAsync(Mantis.ClosedIssuesFilterID, 1, Kanban.NumberOfClosedMessagesToLoad, DoneLoadingIssuesCallback)", 0);
 		}
+		document.getElementById("selected-filter-name").innerHTML = GetDefaultFilterName()
 	} else {
 		var retObj = Mantis.ProjectGetIssues(Mantis.CurrentProjectID, 0, 0);
 		CreateKanbanStoriesFromMantisIssues(retObj);
@@ -413,7 +414,7 @@ function SelectProject(openStoryID) {
 		if(document.getElementById("searchfield").value != "") {
 			SearchForStory(false);
 		}
-
+		document.getElementById("selected-filter-name").innerHTML = "???"
 		StopLoading();
 	}
 }
@@ -434,6 +435,16 @@ function VerifyDefaultFitlers() {
 	if(!foundFilter) Mantis.DefaultFilterID = null;
 	if(!foundClosedFilter) Mantis.ClosedIssuesFilterID = null;
 
+}
+
+function GetDefaultFilterName() {	
+	var name = "";
+	for(var fcount = 0; fcount < Mantis.ProjectFilterList.length; fcount++) {
+		if(Mantis.ProjectFilterList[fcount].id == Mantis.DefaultFilterID) {
+			name = Mantis.ProjectFilterList[fcount].name;
+		}
+	}
+	return name
 }
 
 function UpdateFilter(filterID) {

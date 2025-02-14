@@ -165,7 +165,7 @@ div.notecontainer {
 	min-width: 600px;
 }
 
-#selected-project-name {
+.kanban-header-text {
 	color: #FFFFFF !important;
 	display: inline-block;
 	margin-top: 5px !important;
