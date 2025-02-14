@@ -1,5 +1,5 @@
 var langObj = {
-	"textAddNewStory":"Add a New Story",
+	"textAddNewStory":"Add a New Issue",
 "textAddNote":"Add Note",
 "textAddTag":"Add",
 "textAssignedTo":"Assigned To:",
@@ -15,13 +15,13 @@ var langObj = {
 "textFilter":"Select Filter",
 "textGeneral":"General",
 "textHandler":"Handler",
-"textHide":"Hide",
+"textHide":"Close Sidebar",
 "textHigh":"High",
 "textHistory":"History",
 "textImmediate":"Immediate",
 "textLogout":"Logout",
 "textLow":"Low",
-"textNew":"Add Story",
+"textNew":"Add Issue",
 "textNo":"No",
 "textNormal":"Normal",
 "textNotes":"Notes",
@@ -31,7 +31,7 @@ var langObj = {
 "textReload":"Reload Kanban",
 "textReporter":"Reporter",
 "textSaveChanges":"Save changes",
-"textSaveNewStory":"Save New Story",
+"textSaveNewStory":"Save New Issue",
 "textSelectProject":"Select Project",
 "textSetting":"Settings",
 "textStatus":"Status",
@@ -40,7 +40,7 @@ var langObj = {
 "textTag1":"Tag 1",
 "textTag2":"Tag 2",
 "textTags":"Tags (click to delete):",
-"textUploadAttachments":"Upload Attachments To Story",
+"textUploadAttachments":"Upload Attachments To Issue",
 "textUrgent":"Urgent"
 
 
