@@ -39,15 +39,16 @@ function window_load() {
 
 	document.getElementById('newAttachmentFile').addEventListener('change', HandleFileSelect, false);
 
-	var preConfiguredMantisURL = DefaultSettings.connectURL;
+	var preConfiguredMantisURL = Mantis.ConnectURL;
 
 	LoadSettingsFromLocalStorage();
 
-	if(DefaultSettings.connectURL != undefined && DefaultSettings.connectURL != "") {
-		document.getElementById("mantisURL").value = DefaultSettings.connectURL;
-	} else if (preConfiguredMantisURL != undefined && preConfiguredMantisURL != "") {
+	if (preConfiguredMantisURL != undefined && preConfiguredMantisURL != "") {
 		document.getElementById("mantisURL").value = preConfiguredMantisURL;
-	}
+		document.getElementById("mantisURL").classList.add('hidden');
+	} else if(DefaultSettings.connectURL != undefined && DefaultSettings.connectURL != "") {
+		document.getElementById("mantisURL").value = DefaultSettings.connectURL;
+	} 
 
 	//make sure that the username and password form doesnt actually submit. 
 	//need this here as a fail safe because jQuery is included.

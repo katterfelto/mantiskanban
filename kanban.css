@@ -770,3 +770,6 @@ div[priority="immediate"], div[priority="馬上"] {
     margin: 0;
     padding: 0.3em;
 }
+.hidden {
+    display: none;
+}
